@@ -27,6 +27,7 @@ jobs:
           node-version: '20'
 
       - name: Rebuild manifest
+        id: rebuild
         run: |
           cat > rebuild-manifest.js << 'EOF'
           const fs = require('fs');
@@ -92,16 +93,35 @@ jobs:
             ? fs.readFileSync(MANIFEST_PATH, 'utf8')
             : '';
 
+          // Compute added entries — ones whose id was not in the prior manifest
+          let existingIds = new Set();
+          if (existing) {
+            try {
+              const parsed = JSON.parse(existing);
+              if (Array.isArray(parsed)) {
+                existingIds = new Set(parsed.map(e => e.id));
+              }
+            } catch {
+              // ignore malformed prior manifest
+            }
+          }
+          const newEntries = entries.filter(e => !existingIds.has(e.id));
+          fs.writeFileSync('/tmp/new-issues.json', JSON.stringify(newEntries));
+
           if (json === existing) {
             console.log('Manifest unchanged, skipping write.');
             process.exit(0);
           }
 
           fs.writeFileSync(MANIFEST_PATH, json);
-          console.log(`Manifest rebuilt with ${entries.length} entries.`);
+          console.log(`Manifest rebuilt with ${entries.length} entries (${newEntries.length} new).`);
           EOF
 
           node rebuild-manifest.js
+
+          # Expose new-issue count as step output
+          COUNT=$(node -e "console.log(require('/tmp/new-issues.json').length)")
+          echo "new_count=$COUNT" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push manifest
         run: |
@@ -116,3 +136,33 @@ jobs:
           git add data/issues.json
           git commit -m "chore: rebuild issues manifest [skip ci]"
           git push
+
+      - name: Notify Telegram
+        if: steps.rebuild.outputs.new_count != '0'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_URL: https://gtme-field-guide.vercel.app
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram secrets not set — skipping notification."
+            exit 0
+          fi
+
+          # Send one Telegram message per newly-added issue
+          jq -c '.[]' /tmp/new-issues.json | while read -r entry; do
+            id=$(printf '%03d' "$(echo "$entry" | jq -r '.id')")
+            title=$(echo "$entry" | jq -r '.title')
+            path=$(echo "$entry" | jq -r '.path')
+            text="📖 GTM Field Guide Issue ${id} shipped — ${title} — ${SITE_URL}${path}"
+            http=$(curl -sS -o /tmp/tg.out -w '%{http_code}' \
+              -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=${text}")
+            if [ "$http" != "200" ]; then
+              echo "Telegram API returned $http:"
+              cat /tmp/tg.out
+              exit 1
+            fi
+            echo "Notified: ${text}"
+          done

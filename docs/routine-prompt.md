@@ -146,12 +146,9 @@ automatically on push.
 
 ### STEP 5 — Notify
 
-Post to Slack via the Slack MCP connector:
-
-> 📖 Field Guide Issue [NNN] shipped — [theme] — https://gtme-field-guide.vercel.app/issues/issue-[NNN].html
-
-If the Slack connector is not attached to this routine, skip this step
-silently rather than failing the run.
+Nothing to do here. The GitHub Action (`rebuild-manifest.yml`) sends a
+Telegram message on its own after the manifest rebuild succeeds. The
+routine's job ends at the push.
 
 ---
 
@@ -162,11 +159,11 @@ silently rather than failing the run.
 - [ ] Prompt: paste the "The Prompt" section above
 - [ ] Repository: `gtme-field-guide` — enable *Allow unrestricted branch pushes*
 - [ ] Environment: default (web search on)
-- [ ] Connectors: GitHub (native) + Slack MCP. Remove everything else.
+- [ ] Connectors: GitHub (native) only. Remove everything else — Telegram notifications are handled by the GitHub Action, not the routine.
 - [ ] Trigger: Schedule → Weekly → Friday 08:00 local
 - [ ] Test: click *Run now*, review the session at claude.ai/code, verify:
   - [ ] `issues/issue-NNN.html` pushed
   - [ ] GitHub Action ran and rebuilt `data/issues.json`
   - [ ] Vercel redeployed
-  - [ ] Slack message posted
+  - [ ] Telegram message posted (from the GitHub Action, not the routine)
   - [ ] Index page shows new band for the issue
