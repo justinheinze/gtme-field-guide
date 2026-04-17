@@ -70,9 +70,9 @@ exactly 12 objects with this schema:
     "url": "https://...",
     "handle_display": "@handle or domain.com",
     "description": "2–3 line Source Serif body describing the source or post.",
-    "signal_metric": "Number, date, or one-line pull quote",
+    "signal_metric": "Number, date, or one-line pull quote — must fit on ONE rendered line; max 5 words",
     "medium": "SUBSTACK | YOUTUBE | COHORT | LINKEDIN | HUB | POST",
-    "callout_body": "3–5 sentences of concrete editorial margin notes — what to borrow, build, or ignore. Reference specific tactics, plays, or frameworks the source is known for. No 'subscribe and learn' fluff."
+    "callout_body": "2–3 sentences, max 50 words. Concrete editorial margin notes — what to borrow, build, or ignore. Reference specific tactics, plays, or frameworks. No 'subscribe and learn' fluff."
   }
 ]
 ```

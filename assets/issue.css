@@ -107,10 +107,12 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   position: relative;
   min-width: 0;
+  min-height: 0;
 }
 
 .page-right {
   justify-content: space-between;
+  gap: 2vh;
 }
 
 .rank-ghost {
@@ -140,11 +142,11 @@ a { color: inherit; text-decoration: none; }
 .headline {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: clamp(32px, 5vw, 88px);
-  line-height: 1.02;
+  font-size: clamp(28px, 4vw, 64px);
+  line-height: 1.05;
   letter-spacing: -0.01em;
   margin-bottom: 3vh;
-  max-width: 20ch;
+  max-width: 22ch;
   position: relative;
 }
 
@@ -160,20 +162,21 @@ a { color: inherit; text-decoration: none; }
 
 .description {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: clamp(17px, 1.5vw, 26px);
-  line-height: 1.45;
+  font-size: clamp(16px, 1.35vw, 22px);
+  line-height: 1.5;
   opacity: 0.85;
-  max-width: 40ch;
+  max-width: 44ch;
   position: relative;
 }
 
 .signal {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: clamp(40px, 6.5vw, 120px);
-  line-height: 1;
+  font-size: clamp(32px, 4.2vw, 68px);
+  line-height: 1.05;
   letter-spacing: -0.01em;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
+  overflow-wrap: break-word;
 }
 
 .medium-tag {
@@ -206,8 +209,8 @@ a { color: inherit; text-decoration: none; }
 
 .callout-body {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: clamp(15px, 1.25vw, 22px);
-  line-height: 1.5;
+  font-size: clamp(14px, 1.1vw, 19px);
+  line-height: 1.55;
   opacity: 0.8;
 }
 
