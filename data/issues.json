@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "date": "2026-04-17",
+    "title": "The Agentic Stack",
+    "path": "/issues/issue-001.html",
+    "preview": "AI-native GTM infrastructure consolidates: managed agents, benchmarks, and cohorts define the new practitioner stack."
+  }
+]
