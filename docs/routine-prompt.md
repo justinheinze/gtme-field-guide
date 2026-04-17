@@ -8,9 +8,9 @@ file at runtime.
 The prompt has been kept in sync with:
 
 - `data/issues.json` shape: `{ id: number, date: "YYYY-MM-DD", title: string, path: string, preview: string }`
-- Storage path: `public/issues/issue-NNN.html`
+- Storage path: `issues/issue-NNN.html`
 - Manifest action parsing: `<title>` format and `<meta name="description">`
-- No Vercel rewrites — the `/public/...` path is the literal URL
+- No Vercel rewrites — `/issues/...` and `/assets/...` are the literal URLs
 
 ---
 
@@ -47,7 +47,7 @@ Anchor the issue in **12 items**:
 
 **Quality bar**: at least 3 items in each issue must be genuinely new
 (not repeated from the previous issue). Diff against the most recent
-file in `public/issues/` to check.
+file in `issues/` to check.
 
 ### STEP 3 — Generate the magazine HTML
 
@@ -137,7 +137,7 @@ Right (45%):
 
 ### STEP 4 — Commit
 
-- Write the HTML to `public/issues/issue-[NNN].html`.
+- Write the HTML to `issues/issue-[NNN].html`.
 - Commit message: `Publish issue [NNN] — [date] — [theme]`.
 - Push to main. Unrestricted branch push is enabled on this repo.
 
@@ -148,7 +148,7 @@ automatically on push.
 
 Post to Slack via the Slack MCP connector:
 
-> 📖 Field Guide Issue [NNN] shipped — [theme] — https://gtme-field-guide.vercel.app/public/issues/issue-[NNN].html
+> 📖 Field Guide Issue [NNN] shipped — [theme] — https://gtme-field-guide.vercel.app/issues/issue-[NNN].html
 
 If the Slack connector is not attached to this routine, skip this step
 silently rather than failing the run.
@@ -165,7 +165,7 @@ silently rather than failing the run.
 - [ ] Connectors: GitHub (native) + Slack MCP. Remove everything else.
 - [ ] Trigger: Schedule → Weekly → Friday 08:00 local
 - [ ] Test: click *Run now*, review the session at claude.ai/code, verify:
-  - [ ] `public/issues/issue-NNN.html` pushed
+  - [ ] `issues/issue-NNN.html` pushed
   - [ ] GitHub Action ran and rebuilt `data/issues.json`
   - [ ] Vercel redeployed
   - [ ] Slack message posted

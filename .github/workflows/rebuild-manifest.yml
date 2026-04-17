@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'public/issues/**'
+      - 'issues/**'
 
 permissions:
   contents: write
@@ -33,7 +33,7 @@ jobs:
           const path = require('path');
           const { execSync } = require('child_process');
 
-          const ISSUES_DIR = 'public/issues';
+          const ISSUES_DIR = 'issues';
           const MANIFEST_PATH = 'data/issues.json';
 
           fs.mkdirSync(path.dirname(MANIFEST_PATH), { recursive: true });
@@ -79,7 +79,7 @@ jobs:
               id,
               date: date.split('T')[0],
               title: theme,
-              path: `/public/issues/${filename}`,
+              path: `/issues/${filename}`,
               preview
             };
           });
