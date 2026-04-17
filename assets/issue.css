@@ -295,3 +295,164 @@ a { color: inherit; text-decoration: none; }
 
 .dots .dot.active { opacity: 1; }
 .dots .dot:hover  { opacity: 0.55; }
+
+/* ─── Vertical scroll mode (phones + tablets in portrait) ──────── */
+
+@media (max-width: 900px) {
+  html, body {
+    overflow: auto;
+    height: auto;
+    width: 100%;
+  }
+
+  .pages {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    transition: none;
+  }
+
+  .page {
+    flex: none;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 10vw 8vw;
+    display: block;
+    border-bottom: 1px solid rgba(244, 241, 234, 0.08);
+  }
+
+  .page.light {
+    border-bottom-color: rgba(10, 10, 10, 0.08);
+  }
+
+  /* Content pages: collapse 55/45 grid, stack instead */
+  .page.dark,
+  .page.light {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .page-left {
+    display: block;
+  }
+
+  .page-right {
+    display: block;
+    margin-top: 6vw;
+  }
+
+  .rank-ghost {
+    top: -3vw;
+    left: -2vw;
+    font-size: clamp(100px, 34vw, 240px);
+    opacity: 0.1;
+  }
+
+  .category-tag {
+    margin-bottom: 5vw;
+  }
+
+  .headline {
+    font-size: clamp(30px, 8vw, 56px);
+    margin-bottom: 5vw;
+    max-width: none;
+  }
+
+  .handle {
+    font-size: clamp(13px, 3.2vw, 16px);
+    margin-bottom: 5vw;
+  }
+
+  .description {
+    font-size: clamp(17px, 4.4vw, 22px);
+    line-height: 1.5;
+    max-width: none;
+  }
+
+  .signal {
+    font-size: clamp(36px, 11vw, 72px);
+    margin-bottom: 4vw;
+  }
+
+  .medium-tag {
+    margin-bottom: 5vw;
+  }
+
+  .callout {
+    padding: 5vw 5vw;
+  }
+
+  .callout-body {
+    font-size: clamp(15px, 4vw, 19px);
+  }
+
+  /* Cover */
+  .page.cover {
+    min-height: 90vh;
+    padding: 14vw 8vw;
+  }
+
+  .page.cover .masthead {
+    font-size: clamp(44px, 16vw, 110px);
+    line-height: 0.94;
+  }
+
+  .page.cover .subtitle {
+    font-size: clamp(17px, 4.8vw, 26px);
+    margin-top: 6vw;
+  }
+
+  .page.cover .cover-top,
+  .page.cover .cover-bottom {
+    font-size: clamp(10px, 2.6vw, 13px);
+  }
+
+  .page.cover .cover-bottom {
+    justify-self: start;
+    text-align: left;
+    margin-top: 8vw;
+  }
+
+  /* Back cover */
+  .page.back {
+    min-height: 90vh;
+    padding: 14vw 8vw;
+    text-align: left;
+  }
+
+  .page.back .pull-quote {
+    font-size: clamp(24px, 7vw, 48px);
+    max-width: 100%;
+    margin: 8vw 0;
+    text-align: left;
+  }
+
+  .page.back .attribution {
+    text-align: left;
+  }
+
+  .page.back .colophon {
+    font-size: clamp(14px, 3.6vw, 17px);
+    max-width: 100%;
+    margin: 8vw 0 0 0;
+    text-align: left;
+  }
+
+  .page.back .back-bottom {
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 8vw;
+    font-size: clamp(10px, 2.6vw, 13px);
+  }
+
+  .page.back .back-top {
+    font-size: clamp(10px, 2.6vw, 13px);
+  }
+
+  /* Nav dots redundant once the feed is vertical */
+  .dots {
+    display: none;
+  }
+}
