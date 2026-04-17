@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GTM Engineering Field Guide</title>
+    <meta
+      name="description"
+      content="A weekly field guide for the builder-operator. Published Fridays."
+    />
+    <link rel="stylesheet" href="/public/assets/fonts.css" />
+    <link rel="stylesheet" href="/public/assets/shell.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <h1>
+        GTM<br />
+        ENGINEERING<br />
+        FIELD GUIDE
+      </h1>
+      <p class="submasthead">
+        A weekly field guide for the builder-operator.
+      </p>
+      <div class="meta-row">
+        <span id="issue-range">ISSUE 001 · UPDATED WEEKLY</span>
+        <span>PUBLISHED FRIDAYS · 08:00 CT</span>
+      </div>
+    </header>
+
+    <div class="rule"></div>
+
+    <main id="issues" aria-label="Published issues">
+      <!-- rendered from /data/issues.json -->
+    </main>
+
+    <footer class="colophon">
+      <p>
+        Set in Playfair Display, Source Serif, and IBM Plex Mono. Compiled
+        weekly from primary sources across newsletters, communities, and
+        practitioner feeds. Intended as a working reference, not a reading
+        list — every entry is a node in a builder's graph: subscribe, lift
+        the playbook, ship the workflow, measure the lift.
+      </p>
+      <div class="footmark">
+        <span>GTME FIELD GUIDE</span>
+        <span>PRIVATE EDITION</span>
+      </div>
+    </footer>
+
+    <script>
+      (async () => {
+        const main = document.getElementById('issues');
+        const range = document.getElementById('issue-range');
+
+        const pad = (n) => String(n).padStart(3, '0');
+
+        const renderEmpty = () => {
+          main.innerHTML = `
+            <div class="issue-band empty">
+              <div class="num">№ 000</div>
+              <div class="title">First issue shipping soon.</div>
+              <div class="meta">
+                <span>FRIDAYS · 08:00 CT</span>
+                <span class="cta">STANDBY</span>
+              </div>
+            </div>
+          `;
+          range.textContent = 'ISSUE 000 · UPDATED WEEKLY';
+        };
+
+        const renderIssue = (issue) => {
+          const num = pad(issue.id);
+          const date = (issue.date || '').toUpperCase();
+          return `
+            <a class="issue-band" href="${issue.path}">
+              <div class="num">№ ${num}</div>
+              <div class="title">${issue.title || 'Untitled'}</div>
+              <div class="meta">
+                <span>${date}</span>
+                <span class="cta">READ →</span>
+              </div>
+            </a>
+          `;
+        };
+
+        try {
+          const res = await fetch('/data/issues.json', { cache: 'no-store' });
+          if (!res.ok) throw new Error(`manifest ${res.status}`);
+          const issues = await res.json();
+
+          if (!Array.isArray(issues) || issues.length === 0) {
+            renderEmpty();
+            return;
+          }
+
+          const sorted = [...issues].sort((a, b) => {
+            const da = Date.parse(a.date) || 0;
+            const db = Date.parse(b.date) || 0;
+            if (db !== da) return db - da;
+            return (b.id || 0) - (a.id || 0);
+          });
+
+          main.innerHTML = sorted.map(renderIssue).join('');
+
+          const latest = Math.max(...sorted.map((i) => i.id || 0));
+          range.textContent = `ISSUE 001–${pad(latest)} · UPDATED WEEKLY`;
+        } catch (err) {
+          console.error('[gtme] manifest load failed:', err);
+          renderEmpty();
+        }
+      })();
+    </script>
+  </body>
+</html>

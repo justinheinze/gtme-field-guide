@@ -1,0 +1,194 @@
+/* gtme-field-guide — magazine rack shell */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #0a0a0a;
+  --paper: #f4f1ea;
+  --rule: rgba(244, 241, 234, 0.18);
+  --rule-strong: rgba(244, 241, 234, 0.6);
+}
+
+html,
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-feature-settings: 'lnum', 'pnum';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── Masthead ───────────────────────────────────────────────────── */
+
+.masthead {
+  padding: 8vh 6vw 2vh;
+}
+
+.masthead h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(44px, 6vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.submasthead {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.6vw, 26px);
+  opacity: 0.75;
+  margin-top: 1.4vh;
+  max-width: 60ch;
+}
+
+.meta-row {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: clamp(11px, 0.85vw, 14px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 3.2vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rule {
+  height: 1px;
+  background: var(--rule-strong);
+  margin: 2.4vh 6vw 0;
+}
+
+/* ─── Issue list ─────────────────────────────────────────────────── */
+
+main {
+  margin-top: 2vh;
+}
+
+.issue-band {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  min-height: 20vh;
+  padding: 0 6vw;
+  border-bottom: 1px solid var(--rule);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.issue-band:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.issue-band:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.issue-band .num {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: clamp(22px, 2.4vw, 42px);
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+
+.issue-band .title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.issue-band .meta {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: clamp(11px, 0.95vw, 15px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: right;
+  opacity: 0.85;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  align-items: flex-end;
+}
+
+.issue-band .meta .cta {
+  opacity: 0.9;
+}
+
+/* Empty state — same band grammar, lower emphasis */
+.issue-band.empty {
+  pointer-events: none;
+}
+
+.issue-band.empty .title {
+  font-style: italic;
+  opacity: 0.55;
+}
+
+.issue-band.empty .meta {
+  opacity: 0.55;
+}
+
+/* ─── Colophon ───────────────────────────────────────────────────── */
+
+footer.colophon {
+  padding: 10vh 6vw 8vh;
+  max-width: 68ch;
+  font-size: clamp(13px, 1.05vw, 17px);
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+footer.colophon .footmark {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: clamp(10px, 0.8vw, 12px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2.4vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .masthead {
+    padding: 6vh 6vw 2vh;
+  }
+
+  .meta-row {
+    flex-direction: column;
+    gap: 0.4em;
+  }
+
+  .issue-band {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.8em;
+    padding: 4vh 6vw;
+    min-height: 0;
+  }
+
+  .issue-band .meta {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
