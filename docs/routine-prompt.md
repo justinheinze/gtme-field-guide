@@ -159,7 +159,11 @@ don't fit the content-page template.
 ```html
 <section class="page cover">
   <div class="cover-top">VOL. 01 · ISSUE {NNN} · {display_date}</div>
-  <div class="masthead">GTM<br>ENGINEERING<br>FIELD GUIDE</div>
+  <div class="masthead">
+    <span class="line line-gtm">GTM</span>
+    <span class="line line-engineering">ENGINEERING</span>
+    <span class="line line-fieldguide">FIELD GUIDE</span>
+  </div>
   <p class="subtitle">{subtitle}</p>
   <div class="cover-bottom">{category_mix} → SWIPE</div>
 </section>
