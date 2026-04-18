@@ -426,8 +426,9 @@ a { color: inherit; text-decoration: none; }
   }
 
   .page.cover .masthead {
-    font-size: clamp(44px, 16vw, 110px);
-    line-height: 0.94;
+    font-size: clamp(32px, 11vw, 84px);
+    line-height: 0.96;
+    overflow-wrap: break-word;
   }
 
   .page.cover .subtitle {
