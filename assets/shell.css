@@ -203,8 +203,6 @@ footer.colophon .footmark {
   }
 
   footer.colophon .footmark {
-    flex-direction: column;
-    gap: 0.4em;
     margin-top: 4vh;
   }
 }
