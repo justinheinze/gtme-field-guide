@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0a0a0a"/>
+  <g fill="#f4f1ea" text-anchor="middle"
+     font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+     font-weight="900">
+    <text x="32" y="26" font-size="16" letter-spacing="-0.3">GTME</text>
+    <text x="32" y="54" font-size="30" letter-spacing="-1">FG</text>
+  </g>
+</svg>

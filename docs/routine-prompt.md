@@ -203,6 +203,7 @@ Build the file using this exact skeleton (substituting values):
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GTM Field Guide — Issue {NNN} — {theme}</title>
   <meta name="description" content="{description}" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="stylesheet" href="/assets/fonts.css" />
   <link rel="stylesheet" href="/assets/issue.css" />
 </head>
