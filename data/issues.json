@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "date": "2026-04-17",
+    "title": "Agentic Shift",
+    "path": "/issues/issue-001.html",
+    "preview": "GTM infrastructure moves from tools to actors as Clay, Mutiny, and Relevance AI ship agents."
+  }
+]
