@@ -162,6 +162,31 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 3vh;
   position: relative;
   word-break: break-word;
+  display: inline-block;
+}
+
+a.handle {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 180ms ease, text-decoration-color 180ms ease;
+}
+
+a.handle::after {
+  content: " \2197"; /* ↗ */
+  opacity: 0.55;
+  font-size: 0.85em;
+  margin-left: 0.18em;
+  letter-spacing: 0;
+}
+
+a.handle:hover,
+a.handle:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  outline: none;
 }
 
 .description {

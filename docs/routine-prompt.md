@@ -129,7 +129,7 @@ Required HTML structure (use the exact class names below — CSS lives in /asset
     <div class="rank-ghost">{rank}</div>
     <div class="category-tag">{category}</div>
     <h2 class="headline">{headline}</h2>
-    <div class="handle">{handle_display}</div>
+    <a class="handle" href="{url}" target="_blank" rel="noopener noreferrer">{handle_display}</a>
     <p class="description">{description}</p>
   </div>
   <div class="page-right">
