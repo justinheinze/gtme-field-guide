@@ -207,7 +207,7 @@ Build the file using this exact skeleton (substituting values):
   <link rel="stylesheet" href="/assets/issue.css" />
 </head>
 <body>
-  <a href="/" class="home-link" aria-label="Back to newsstand">← NEWSSTAND</a>
+  <a href="/" class="home-link" aria-label="Back to index">← INDEX</a>
   <main class="pages">
     {cover section}
     {12 subagent-returned sections in rank order 01–12}

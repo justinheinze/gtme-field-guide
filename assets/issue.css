@@ -80,16 +80,6 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
-/* Optical justification: match the visual width of the bottom two
-   lines so the masthead reads as a unified block, not a ragged stack. */
-.page.cover .masthead .line-engineering {
-  letter-spacing: -0.02em;
-}
-
-.page.cover .masthead .line-fieldguide {
-  letter-spacing: 0.055em;
-}
-
 .page.cover .subtitle {
   font-family: 'Source Serif 4', Georgia, serif;
   font-style: italic;
