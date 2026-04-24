@@ -1,5 +1,12 @@
 [
   {
+    "id": 2,
+    "date": "2026-04-24",
+    "title": "Signal Architecture",
+    "path": "/issues/issue-002.html",
+    "preview": "How GTM engineers are building smarter signal layers, not just faster outbound pipes"
+  },
+  {
     "id": 1,
     "date": "2026-04-17",
     "title": "Agentic Shift",
