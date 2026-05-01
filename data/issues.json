@@ -1,5 +1,12 @@
 [
   {
+    "id": 3,
+    "date": "2026-05-01",
+    "title": "Agents Take Infrastructure",
+    "path": "/issues/issue-003.html",
+    "preview": "The week AI agents moved from GTM experiments to production CRM and pipeline infrastructure"
+  },
+  {
     "id": 2,
     "date": "2026-04-24",
     "title": "Signal Architecture",
