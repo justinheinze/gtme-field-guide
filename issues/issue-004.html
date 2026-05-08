@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTM Field Guide — Issue 004 — Agents That Transact</title>
+  <meta name="description" content="The week AI agents gained ability to think, act, and pay—completing the agentic GTM stack" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/fonts.css" />
+  <link rel="stylesheet" href="/assets/issue.css" />
+</head>
+<body>
+  <a href="/" class="home-link" aria-label="Back to index">← INDEX</a>
+  <main class="pages">
+
+    <section class="page cover">
+      <div class="cover-top">VOL. 01 · ISSUE 004 · MAY 08, 2026</div>
+      <div class="masthead">
+        <span class="line line-gtm">GTM</span>
+        <span class="line line-engineering">ENGINEERING</span>
+        <span class="line line-fieldguide">FIELD GUIDE</span>
+      </div>
+      <p class="subtitle">The week agents learned to pay — and the full agentic GTM stack snapped into place</p>
+      <div class="cover-bottom">SUBSTACK · POST · COHORT · HUB → SWIPE</div>
+    </section>
+
+    <section class="page dark">
+  <div class="page-left">
+    <div class="rank-ghost">01</div>
+    <div class="category-tag">SUBSTACK</div>
+    <h2 class="headline">Pulse #26: Agentic Stack Goes Complete</h2>
+    <a class="handle" href="https://gtmengineerschool.substack.com/p/the-gtm-engineer-pulse-26" target="_blank" rel="noopener noreferrer">@matteo-titta</a>
+    <p class="description">Matteo Tittarelli&#39;s #26 frames the week three primitives landed simultaneously: Anthropic MCP connectors going live with Blender, Autodesk, and Adobe; Stripe giving agents programmatic wallets; and Meta dropping a CLI so AI agents can manage Marketing API campaigns from the command line. Tittarelli calls it the moment agents that think, act, and pay all converged in a single news cycle. GTM Engineer School Cohort 4 opening is also announced inside.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">Published May 4, 2026</div>
+    <div class="medium-tag">SUBSTACK</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The &#39;think-act-pay&#39; framing is the steal: use it as your board-level narrative for why agentic GTM infrastructure investment is non-negotiable now. Pull the Cohort 4 curriculum as a skills benchmark. The MCP + Stripe + Meta CLI trifecta is the clearest summary of the week anywhere.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page light">
+  <div class="page-left">
+    <div class="rank-ghost">02</div>
+    <div class="category-tag">HUB</div>
+    <h2 class="headline">Claygent Builder: GTM Agents in Plain Language</h2>
+    <a class="handle" href="https://www.clay.com/blog/claygent-builder" target="_blank" rel="noopener noreferrer">clay.com</a>
+    <p class="description">Clay shipped Claygent Builder on May 7 — a native in-platform environment for creating, testing, and deploying GTM agents without leaving Clay. Users describe an agent in plain language, test on real data free of charge, upload documents for business context, and deploy once with changes propagating across all workflows. New capabilities include hot-swap AI models, one-click version rollback, and a new &#x27;Find Contacts and Jobs&#x27; agent tool.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">Shipped May 7, 2026</div>
+    <div class="medium-tag">HUB</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">Hot-swap AI models and one-click version rollback transform Claygent from fragile prototype to production-grade infrastructure. Test the &#x27;Find Contacts and Jobs&#x27; agent against your ICP before building custom search logic — the free trial testing tier removes every excuse not to prototype this week.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page dark">
+  <div class="page-left">
+    <div class="rank-ghost">03</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">AWS AgentCore: Agents Pay for Data Autonomously</h2>
+    <a class="handle" href="https://aws.amazon.com/blogs/machine-learning/agents-that-transact-introducing-amazon-bedrock-agentcore-payments-built-with-coinbase-and-stripe/" target="_blank" rel="noopener noreferrer">aws.amazon.com</a>
+    <p class="description">Amazon Bedrock AgentCore launched a preview of agent-native payment capabilities built with Coinbase and Stripe. When an AI agent encounters a paid resource and receives an HTTP 402 response, AgentCore handles the full x402 protocol — wallet auth, stablecoin payment, and proof delivery — without interrupting the agent&#39;s reasoning loop. Initial use cases target micropayments between $0.10 and $3.00 for premium data APIs and paywalled content.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">$0.10–$3.00 micropayments live</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The x402 protocol is worth understanding technically: agents encounter a paywall, handle auth, pay in stablecoin, receive proof, and continue — zero human touchpoints. For enrichment workflows this unlocks pay-per-query data APIs that were previously blocked by billing friction. The commerce layer for agentic GTM just arrived.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page light">
+  <div class="page-left">
+    <div class="rank-ghost">04</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">Meta Ads CLI Brings Campaigns to Command Line</h2>
+    <a class="handle" href="https://ppc.land/metas-new-ads-cli-lets-ai-agents-manage-ad-campaigns-from-the-command-line/" target="_blank" rel="noopener noreferrer">ppc.land</a>
+    <p class="description">Meta shipped an Ads CLI — a command-line tool wrapping the entire Marketing API into a single installable executable — alongside a companion MCP server. GTM teams can now create, edit, and analyze Meta campaigns directly from a terminal, CI/CD pipeline, or AI agent without custom API wrappers. The tool supports table, JSON, and plain output formats with environment-variable-based auth, and installs via pip or uv.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">pip install meta-ads-mcp</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The table and JSON output format is the GTM engineer&#39;s unlock: pipe Meta campaign performance directly into Claude for analysis or into n8n for automated budget reallocation. Build the audit workflow before the optimization workflow — understand what the agent sees before you let it act. Last major ad platform joining the agentic stack.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page dark">
+  <div class="page-left">
+    <div class="rank-ghost">05</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">Stripe Sessions 2026: 288 Launches, Agentic Commerce</h2>
+    <a class="handle" href="https://stripe.com/newsroom/news/sessions-2026" target="_blank" rel="noopener noreferrer">stripe.com</a>
+    <p class="description">Stripe held its annual conference and shipped 288 products anchored by the Agentic Commerce Suite — a complete solution for selling through AI agents via uploaded product catalogs and agent access management from the Dashboard. Other major launches: Machine Payments Protocol for agent-to-agent micropayments, Link agent wallets for programmatic purchasing, streaming payments via Metronome and Tempo, and a Google partnership enabling purchases inside AI Mode and the Gemini app.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">288 products, one conference</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The Machine Payments Protocol is the infrastructure bet: upload your product catalog to Stripe, expose it to the agent layer, and let AI-driven buyers find and purchase autonomously. GTM teams selling to technical buyers should map their catalog into this system now — the buyer-side agent infrastructure is arriving before most sellers are ready.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page light">
+  <div class="page-left">
+    <div class="rank-ghost">06</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">n8n Agents Join Microsoft 365 as Team Members</h2>
+    <a class="handle" href="https://blog.n8n.io/deploy-n8n-agents-that-show-up-as-members-of-the-team-inside-microsoft-apps/" target="_blank" rel="noopener noreferrer">blog.n8n.io</a>
+    <p class="description">n8n announced a native integration with Microsoft Agent 365 — now generally available — allowing n8n-built AI agents to appear inside Microsoft 365 apps, Teams, Outlook, and SharePoint as actual team members with company-issued identities and permissions. Enterprise users can trigger n8n automation workflows directly from Microsoft surfaces. For n8n, this means 1,000+ native integrations become accessible from within the Microsoft productivity suite.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">1,000+ integrations in Microsoft 365</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The enterprise unlock is permissions: n8n agents get company-issued M365 identities with proper access controls, not API keys passed around in Notion docs. If your buyers live in Teams, deploy a meeting-prep agent that runs 10 minutes before every intro call — it shows up as a teammate, no new tooling required.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page dark">
+  <div class="page-left">
+    <div class="rank-ghost">07</div>
+    <div class="category-tag">SUBSTACK</div>
+    <h2 class="headline">Five AI-Native GTM Plays That Actually Work</h2>
+    <a class="handle" href="https://www.growthunhinged.com/p/the-best-ai-native-gtm-plays-you-re-not-running" target="_blank" rel="noopener noreferrer">growthunhinged.com</a>
+    <p class="description">Kyle Poyar and Brendan Short co-authored a breakdown of five automated GTM plays working for AI-native growth teams: closed-lost re-engagement agents, champion tracking and job-change triggers, micro-campaign systems, competitor displacement plays, and AI-generated account prep. The piece predicts that within 12 months, most growth-stage teams will run five or more continuous agent workflows as core revenue infrastructure — not as experiments.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">5 plays, all automatable now</div>
+    <div class="medium-tag">SUBSTACK</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The micro-campaign system is the most underrated play: replace the weekly &#39;what do we target&#39; meeting with a Monday-morning agent run that segments and queues the week&#39;s sequences automatically. Champion tracking delivers the highest ROI for expansion-motion teams — build it before you build anything else on this list.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page light">
+  <div class="page-left">
+    <div class="rank-ghost">08</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">a16z Growth Engineer Fellowship: 65 Inaugural Fellows</h2>
+    <a class="handle" href="https://www.a16z.news/p/meet-the-a16z-growth-engineer-fellows" target="_blank" rel="noopener noreferrer">a16z.news</a>
+    <p class="description">Andreessen Horowitz selected 65 inaugural fellows for its 8-week Growth Engineer Fellowship from thousands of applicants, drawing talent from OpenAI, Replit, Notion, Coinbase, ElevenLabs, Perplexity, and Clay. The program offers insider access to the a16z portfolio ecosystem, off-the-record dinners, and a &#x27;tiny talks&#x27; demo series. a16z modeled it explicitly after its Design Engineer and New Media fellowships, calling the growth engineer &#x27;one of the most important early hires&#x27; at AI-native startups.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">65 fellows, 8-week program</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">When a16z names a role with a fellowship, the role crosses from experimental to standard. Track the fellows list — OpenAI and Clay alumni will publish methods and benchmarks as the program runs. Use the a16z framing (&#x27;most important early hire&#x27;) verbatim in your next board conversation about headcount.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page dark">
+  <div class="page-left">
+    <div class="rank-ghost">09</div>
+    <div class="category-tag">COHORT</div>
+    <h2 class="headline">GTM Engineer School Cohort 4 Now Open</h2>
+    <a class="handle" href="https://gtm-engineer-school.com/" target="_blank" rel="noopener noreferrer">gtm-engineer-school.com</a>
+    <p class="description">GTM Engineer School&#39;s fourth live cohort is open for enrollment with fewer than 55 spots remaining of 75 total. The program runs six weeks with live sessions Tuesdays and Fridays at 4-5 PM ET, concluding in a capstone demo day. Past cohorts have included 200-plus operators from Google, Gorgias, Fivetran, SurveyMonkey, Airtable, Slack, and Loom, with Cohort 4 expected to incorporate the latest agentic tooling stack.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">Under 55 spots remaining</div>
+    <div class="medium-tag">COHORT</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The twice-weekly cadence plus capstone demo day is the format worth studying: skip certification, ship a working system instead. Use the Cohort 4 curriculum as a free benchmark for what &#39;good&#39; looks like in mid-2026. If you are building an internal GTM engineering practice, model your onboarding sprint on this structure.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page light">
+  <div class="page-left">
+    <div class="rank-ghost">10</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">PredictLeads Lookalike API: 18M Companies, Structured Reasoning</h2>
+    <a class="handle" href="https://blog.predictleads.com/2026/05/06/company-lookalike-api-gtm-workflows" target="_blank" rel="noopener noreferrer">predictleads.com</a>
+    <p class="description">PredictLeads shipped a Company Lookalike API covering 18 million-plus companies on May 6, enabling GTM teams to programmatically retrieve lists of companies similar to any target account — with the top 20 matches including a structured explanation of why they are similar. The API plugs directly into CRM, ABM, account scoring, and AI agent workflows. Companion posts published the same day cover lookalike data for AI agents and a market mapping use case guide.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">18M+ companies, top-20 matches</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The structured &#39;why similar&#39; reasoning text is the differentiator: drop it directly into a Claygent prompt as context and let the agent explain to a rep why an account fits, using real data points instead of a black-box score. Use the market mapping guide for ICP expansion plays when your immediate TAM is exhausted.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page dark">
+  <div class="page-left">
+    <div class="rank-ghost">11</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">GTM Engineer Comp 2026: Up to $300K at AI Cos</h2>
+    <a class="handle" href="https://bettsrecruiting.com/blog/top-gtm-engineer-compensation-trends-in-tech-for-2026/" target="_blank" rel="noopener noreferrer">bettsrecruiting.com</a>
+    <p class="description">Betts Recruiting&#x27;s 2026 compensation report documents GTM engineer base salaries ranging $180K-$240K at AI companies, with total comp packages at Vercel and OpenAI exceeding $250K-$300K-plus. Key findings: GTM engineer job openings grew 205 percent year-over-year between 2024 and 2025; Python and SQL fluency adds $70K-$110K in base versus non-technical GTM roles; and variable comp is increasingly tied to pipeline velocity, qualified meetings generated, and conversion improvement.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">$180K–$300K+ at AI companies</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">Use the $180K-$240K base range as your counter-offer floor at any AI-native company. Python and SQL fluency is worth $70K-$110K in annual base — the clearest upskilling ROI in the field right now. Pipeline velocity bonuses replacing quota structures is the comp trend to cite in your next performance review.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page light">
+  <div class="page-left">
+    <div class="rank-ghost">12</div>
+    <div class="category-tag">POST</div>
+    <h2 class="headline">1,000 GTM Engineer Jobs: What the Data Says</h2>
+    <a class="handle" href="https://bloomberry.com/blog/i-analyzed-1000-gtm-engineering-jobs-here-is-what-i-learned/" target="_blank" rel="noopener noreferrer">bloomberry.com</a>
+    <p class="description">Bloomberry crawled every GTM Engineering job posting from the prior year and found 205 percent YoY growth in postings; top required tools are Clay, HubSpot, Outreach, Salesforce, and Zapier; 38 percent require SQL or Python; median posted salary is $127,500 but top payers like Vercel at $252K and OpenAI at $250K skew heavily upward; average experience requirement is 4.1 years; and 9 of 10 GTM Engineer responsibilities overlap with RevOps Engineer postings.</p>
+  </div>
+  <div class="page-right">
+    <div class="signal">205% YoY job posting growth</div>
+    <div class="medium-tag">POST</div>
+    <aside class="callout">
+      <div class="callout-header">WHY IT MATTERS</div>
+      <p class="callout-body">The GTM vs. RevOps differentiator is the single most useful sentence in this dataset: optimize outbound and prospecting (GTM) vs. optimize forecast accuracy (RevOps). Use it to write your JD, scope your interviews, and explain the role to a CFO in under 30 seconds. The tool stack list is your hiring rubric.</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="page back">
+      <div class="back-top">END OF ISSUE · NO. 004 / MAY 08, 2026</div>
+      <div>
+        <blockquote class="pull-quote">The agents that think, act, and pay all landed in the same week.</blockquote>
+        <div class="attribution">— Matteo Tittarelli, GTM Engineer Pulse #26</div>
+        <p class="colophon">Set in Playfair Display, Source Serif, and IBM Plex Mono. Compiled from twelve primary sources across newsletters, communities, and practitioner feeds — MAY 08, 2026. Intended as a working reference, not a reading list. Every entry is a node in a builder&#39;s graph: subscribe, lift the playbook, ship the workflow, measure the lift.</p>
+      </div>
+      <div class="back-bottom">
+        <a href="/">← RETURN TO INDEX</a>
+        <span>PRIVATE EDITION</span>
+      </div>
+    </section>
+
+  </main>
+  <nav class="dots" aria-label="Page navigation"></nav>
+  <script src="/assets/issue.js"></script>
+</body>
+</html>
