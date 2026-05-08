@@ -1,5 +1,12 @@
 [
   {
+    "id": 4,
+    "date": "2026-05-08",
+    "title": "Agents That Transact",
+    "path": "/issues/issue-004.html",
+    "preview": "The week AI agents gained ability to think, act, and pay—completing the agentic GTM stack"
+  },
+  {
     "id": 3,
     "date": "2026-05-01",
     "title": "Agents Take Infrastructure",
