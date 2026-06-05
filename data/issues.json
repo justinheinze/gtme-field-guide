@@ -1,5 +1,12 @@
 [
   {
+    "id": 8,
+    "date": "2026-06-05",
+    "title": "The Operator Layer",
+    "path": "/issues/issue-008.html",
+    "preview": "GTM engineering matures from builder culture to operator discipline, with agents, benchmarks, and new role shapes leading the week."
+  },
+  {
     "id": 7,
     "date": "2026-05-29",
     "title": "The Honest Stack",
