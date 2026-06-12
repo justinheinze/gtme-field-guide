@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTM Field Guide — Issue 009 — The Token Economy</title>
+  <meta name="description" content="Intelligence becomes a budgeted line item as Anthropic, Ramp, and Sitecore reshape GTM infrastructure costs." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/fonts.css" />
+  <link rel="stylesheet" href="/assets/issue.css" />
+</head>
+<body>
+  <a href="/" class="home-link" aria-label="Back to index">← INDEX</a>
+  <main class="pages">
+    <section class="page cover">
+      <div class="cover-top">VOL. 01 · ISSUE 009 · JUNE 12, 2026</div>
+      <div class="masthead">
+        <span class="line line-gtm">GTM</span>
+        <span class="line line-engineering">ENGINEERING</span>
+        <span class="line line-fieldguide">FIELD GUIDE</span>
+      </div>
+      <p class="subtitle">Where compute gets a line item and agents start paying their own way</p>
+      <div class="cover-bottom">HUB · POST · SUBSTACK → SWIPE</div>
+    </section>
+
+    <section class="page dark">
+      <div class="page-left">
+        <div class="rank-ghost">01</div>
+        <div class="category-tag">SUBSTACK</div>
+        <h2 class="headline">Pulse #31: Intelligence Becomes a Budget Line</h2>
+        <a class="handle" href="https://gtmengineerschool.substack.com/p/the-gtm-engineer-pulse-31" target="_blank" rel="noopener noreferrer">@matteo_tittarelli</a>
+        <p class="description">Matteo Tittarelli&#39;s weekly roundup connects Ramp&#39;s $44B raise, Sitecore&#39;s AEO acquisition, and Anthropic&#39;s looming Agent SDK billing split into one thesis: intelligence is now a governed line item, alongside labor and vendor spend. Also featured: Granola MCP for meeting-to-context pipelines.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">1:1 tokens-to-comp ratio</div>
+        <div class="medium-tag">SUBSTACK</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Borrow the &#39;tokens-to-comp&#39; framing when pitching agent infrastructure to finance — it reframes Claude/OpenAI spend as a hiring-equivalent line item. Also worth testing: Granola MCP to pull meeting transcripts straight into Claude as queryable GTM context.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page light">
+      <div class="page-left">
+        <div class="rank-ghost">02</div>
+        <div class="category-tag">POST</div>
+        <h2 class="headline">Anthropic Splits Agent SDK Billing June 15</h2>
+        <a class="handle" href="https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm" target="_blank" rel="noopener noreferrer">techtimes.com</a>
+        <p class="description">Starting June 15, Claude Agent SDK, claude -p, and Claude Code GitHub Actions stop drawing from the chat subscription pool. Usage instead consumes a separate metered credit — $20 to $200 per month depending on plan — billed at full API rates with no rollover.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">$20–$200/mo, no rollover</div>
+        <div class="medium-tag">POST</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Audit every cron-based Clay/Claude agent before June 15 — claim the one-time credit, then build a usage dashboard per workflow. High-volume crons like enrichment loops and nightly scoring will hit the cap fast without overflow billing enabled.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="page-left">
+        <div class="rank-ghost">03</div>
+        <div class="category-tag">POST</div>
+        <h2 class="headline">Ramp Hits $44B, Bets on AI Spend Tracking</h2>
+        <a class="handle" href="https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/" target="_blank" rel="noopener noreferrer">techcrunch.com</a>
+        <p class="description">Ramp&#39;s $750M Series F pushes its valuation to $44B on $1B+ ARR. CEO Eric Glyman is building toward monitoring AI token usage across providers and letting agents transact on a company&#39;s behalf — finance ops and GTM ops converging on one ledger.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">$750M @ $44B valuation</div>
+        <div class="medium-tag">POST</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Watch for Ramp to ship per-agent or per-workflow token spend tracking — if it lands, it could replace the spreadsheet most GTM teams use today to reconcile Clay, Anthropic, and OpenAI bills across departments.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page light">
+      <div class="page-left">
+        <div class="rank-ghost">04</div>
+        <div class="category-tag">HUB</div>
+        <h2 class="headline">Clay Audiences Opens Enterprise Beta</h2>
+        <a class="handle" href="https://www.clay.com/blog/audiences-enterprise-beta-launch" target="_blank" rel="noopener noreferrer">clay.com</a>
+        <p class="description">Clay Audiences pulls CRM records, warehouse data, intent signals, and 150+ enrichment providers into a single unified layer, built for both agentic and human-led workflows to act on directly inside Clay.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">150+ enrichment providers</div>
+        <div class="medium-tag">HUB</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">If your Clay workspace has sprawled into dozens of disconnected tables pulling from the same sources, Audiences is the consolidation play — request beta access now while Clay is still offering credits for feedback.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="page-left">
+        <div class="rank-ghost">05</div>
+        <div class="category-tag">HUB</div>
+        <h2 class="headline">Clay MCP Now Live Inside OpenAI Codex</h2>
+        <a class="handle" href="https://www.clay.com/blog/mcp-in-codex" target="_blank" rel="noopener noreferrer">clay.com</a>
+        <p class="description">Clay MCP — previously shipped to ChatGPT — now runs inside OpenAI&#39;s Codex, letting reps prioritize accounts, research buyers, draft outreach, and send emails using the same Clay Functions your ops team already built, without leaving the coding agent.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">Open beta, enterprise + select</div>
+        <div class="medium-tag">HUB</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Pair this with Claude Code&#39;s existing Clay MCP support to give reps a model-agnostic interface to your Functions library. Worth testing whether Codex&#39;s coding context surfaces better next-step suggestions than chat-only MCP clients.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page light">
+      <div class="page-left">
+        <div class="rank-ghost">06</div>
+        <div class="category-tag">POST</div>
+        <h2 class="headline">Sitecore Buys Scrunch for $225M AEO Play</h2>
+        <a class="handle" href="https://www.sitecore.com/company/newsroom/press-releases/2026/06/sitecore-acquires-scrunch-to-help-brands-influence-discovery--and-buying-decisions" target="_blank" rel="noopener noreferrer">sitecore.com</a>
+        <p class="description">Sitecore acquires answer-engine-optimization startup Scrunch (500+ brand customers) for roughly $225M, folding AI-search visibility insights and its Agent Experience Platform into Sitecore&#39;s DXP — a signal that AEO is becoming a standard martech line item.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">$225M, 500+ brands</div>
+        <div class="medium-tag">POST</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Start tracking how your brand and competitors surface in ChatGPT, Perplexity, and Claude answers as a KPI alongside SEO. Expect AEO scoring to show up in enrichment requests within a quarter or two.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="page-left">
+        <div class="rank-ghost">07</div>
+        <div class="category-tag">LINKEDIN</div>
+        <h2 class="headline">Matteo Tittarelli Flags Swan as Context Layer</h2>
+        <a class="handle" href="https://www.linkedin.com/posts/matteo-titta_is-your-ai-gtm-targeting-the-wrong-leads-activity-7448662111909609472-ardi" target="_blank" rel="noopener noreferrer">@matteo_titta</a>
+        <p class="description">Matteo highlights Swan&#39;s pitch as an &#39;AI GTM engineer&#39; context layer — unifying ICP rules, intent signals, and enrichment so agentic workflows stop targeting the wrong accounts, positioned as a complement to (not replacement for) Clay.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">Context layer, not Clay swap</div>
+        <div class="medium-tag">LINKEDIN</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">If your agents keep chasing accounts outside your ICP, the gap is usually context, not enrichment volume. Test Swan against a narrow segment before treating it as a Clay alternative — the value is qualification logic, not data breadth.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page light">
+      <div class="page-left">
+        <div class="rank-ghost">08</div>
+        <div class="category-tag">LINKEDIN</div>
+        <h2 class="headline">Eric Nowoslawski Maps 4 Cursor GTM Patterns</h2>
+        <a class="handle" href="https://www.linkedin.com/posts/outboundphd_cursor-gtm-use-cases-activity-7393648650272264192-61Sm" target="_blank" rel="noopener noreferrer">@outboundphd</a>
+        <p class="description">Eric Nowoslawski breaks GTM engineering work into four recurring coding patterns — inbound lead processing, outbound sequence enrollment, enrichment pipelines, and CRM sync logic — and shows how Cursor handles each after he shipped 2M lines of code in 45 days.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">4 patterns, 2M lines/45 days</div>
+        <div class="medium-tag">LINKEDIN</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Use his four-pattern taxonomy as a checklist for what to delegate to Cursor or Claude Code first: CRM sync and enrichment pipelines are the highest-leverage, lowest-risk starting points if you haven&#39;t vibe-coded GTM infra yet.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="page-left">
+        <div class="rank-ghost">09</div>
+        <div class="category-tag">SUBSTACK</div>
+        <h2 class="headline">Maja Voje: Agent Launches Break SaaS Playbooks</h2>
+        <a class="handle" href="https://knowledge.gtmstrategist.com/p/how-ai-agents-actually-go-to-market" target="_blank" rel="noopener noreferrer">@majavoje</a>
+        <p class="description">Drawing on $200M+ in AI product launches, Maja Voje outlines four ways AI agent go-to-market diverges from traditional SaaS GTM — spanning pricing models, trust-building, onboarding, and how agents earn the right to act autonomously.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">4 differences, $200M+ ARR</div>
+        <div class="medium-tag">SUBSTACK</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">If you&#39;re building or selling an agent product, not just using agents internally, map your pricing and onboarding against her four divergence points before copying a SaaS playbook — usage- and outcome-based pricing show up repeatedly as the wedge.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page light">
+      <div class="page-left">
+        <div class="rank-ghost">10</div>
+        <div class="category-tag">COHORT</div>
+        <h2 class="headline">Clay University Opens Free APAC GTM Cohort</h2>
+        <a class="handle" href="https://university.clay.com/cohorts" target="_blank" rel="noopener noreferrer">university.clay.com</a>
+        <p class="description">Clay University&#39;s next cohort focuses on production-ready AI GTM workflows for APAC revenue teams, running free with applications due June 29 and the cohort starting July 6 — live sessions with GTM experts building real Clay tables.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">Apps due June 29, free</div>
+        <div class="medium-tag">COHORT</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Free and APAC-focused makes this an easy recommendation even if you&#39;re not based there — the workflow patterns, timezone-aware sequencing and local enrichment sources, transfer directly to other regional expansions.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="page-left">
+        <div class="rank-ghost">11</div>
+        <div class="category-tag">HUB</div>
+        <h2 class="headline">GTME HQ: One-Person GTM Resource Hub</h2>
+        <a class="handle" href="https://www.gtmehq.com/" target="_blank" rel="noopener noreferrer">gtmehq.com</a>
+        <p class="description">Run solo by Elias Stravik, former Head of GTM Engineering at The Kiln (acquired by 2X), GTME HQ bundles templates, job listings, and a vetted experts directory — over 100 operators use it to find working Clay and automation patterns.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">100+ operators, solo-run</div>
+        <div class="medium-tag">HUB</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">The templates section is the draw — exact workflows with video walkthroughs and error fixes, not just screenshots. Faster to scan than Clay&#39;s own template library when you need a working pattern in the next 30 minutes.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page light">
+      <div class="page-left">
+        <div class="rank-ghost">12</div>
+        <div class="category-tag">LINKEDIN</div>
+        <h2 class="headline">Everett Berry Breaks Down Clay&#39;s Release Notes</h2>
+        <a class="handle" href="https://www.linkedin.com/posts/everettberry_clay-gtm-engineering-release-notes-activity-7447634415431643136-EmCM" target="_blank" rel="noopener noreferrer">@everettberry</a>
+        <p class="description">Clay&#39;s Head of GTM Engineering walks through this cycle&#39;s release notes, including the Audiences enterprise beta and Codex MCP integration, translating changelog entries into what GTM engineers should actually change in their tables.</p>
+      </div>
+      <div class="page-right">
+        <div class="signal">Changelog &rarr; action items</div>
+        <div class="medium-tag">LINKEDIN</div>
+        <aside class="callout">
+          <div class="callout-header">WHY IT MATTERS</div>
+          <p class="callout-body">Treat this as a monthly Clay changelog digest from someone who ships the product &mdash; faster than reading raw release notes, and it tells you which new features are worth rebuilding existing tables around versus ignoring.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page back">
+      <div class="back-top">END OF ISSUE · NO. 009 / JUNE 12, 2026</div>
+      <div>
+        <blockquote class="pull-quote">Founders now budget 1:1 tokens-to-comp on engineering hires.</blockquote>
+        <div class="attribution">— Matteo Tittarelli, The GTM Engineer Pulse #31</div>
+        <p class="colophon">Set in Playfair Display, Source Serif, and IBM Plex Mono. Compiled from twelve primary sources across newsletters, communities, and practitioner feeds — JUNE 12, 2026. Intended as a working reference, not a reading list. Every entry is a node in a builder's graph: subscribe, lift the playbook, ship the workflow, measure the lift.</p>
+      </div>
+      <div class="back-bottom">
+        <a href="/">← RETURN TO INDEX</a>
+        <span>PRIVATE EDITION</span>
+      </div>
+    </section>
+  </main>
+  <nav class="dots" aria-label="Page navigation"></nav>
+  <script src="/assets/issue.js"></script>
+</body>
+</html>
